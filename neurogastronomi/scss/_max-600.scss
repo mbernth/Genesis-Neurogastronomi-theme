@@ -1,0 +1,44 @@
+/* Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+
+	.page .entry-title,
+	.single .entry-title {
+		font-size: 36px;
+		font-size: 3.6rem;
+		letter-spacing: -2px;
+	}
+
+	.gallery-item {
+		float: none;
+	}
+
+	.gallery-columns-2 .gallery-item,
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		width: 100%;
+	}
+	
+	.five-sixths,
+	.four-sixths,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fourths,
+	.three-sixths,
+	.two-fourths,
+	.two-sixths,
+	.two-thirds {
+		float: none;
+		margin-left: 0;
+		width: 100%;
+	}
+
+}

@@ -1,31 +1,31 @@
 <?php
 /**
- * Digital Pro.
+ * Neurogastronomi.
  *
- * This file adds the required CSS to the front end to the Digital Pro Theme.
+ * This file adds the required CSS to the front end to the Neurogastronomi Theme.
  *
- * @package Digital
- * @author  StudioPress
+ * @package Neurogastronomi
+ * @author  mono voce aps
  * @license GPL-2.0+
- * @link    http://my.studiopress.com/themes/digital/
+ * @link    https://github.com/mbernth/Genesis-Neurogastronomi-theme
  */
 
-add_action( 'wp_enqueue_scripts', 'digital_css' );
+add_action( 'wp_enqueue_scripts', 'neurogastronomi_css' );
 /**
 * Checks the settings for the link color color, accent color, and header
 * If any of these value are set the appropriate CSS is output
 *
 * @since 1.0.0
 */
-function digital_css() {
+function neurogastronomi_css() {
 
 	$handle = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';
 
-	$color_accent = get_theme_mod( 'digital_accent_color', digital_customizer_get_default_accent_color() );
+	$color_accent = get_theme_mod( 'neurogastronomi_accent_color', neurogastronomi_customizer_get_default_accent_color() );
 
 	$css = '';
 
-	$css .= ( digital_customizer_get_default_accent_color() !== $color_accent ) ? sprintf( '
+	$css .= ( neurogastronomi_customizer_get_default_accent_color() !== $color_accent ) ? sprintf( '
 		button,
 		input[type="button"],
 		input[type="reset"],

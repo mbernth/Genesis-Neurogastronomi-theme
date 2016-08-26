@@ -1,9 +1,9 @@
 <?php
 /**
- * This file adds the Landing page template to the Digital Pro Theme.
+ * This file adds the Landing page template to the Neurogastronomi Theme.
  *
- * @author StudioPress
- * @package Digital Pro Theme
+ * @author mono voce aps
+ * @package Neurogastronomi Theme
  * @subpackage Customizations
  */
 
@@ -12,10 +12,10 @@ Template Name: Landing
 */
 
 //* Add landing body class to the head
-add_filter( 'body_class', 'digital_add_body_class' );
-function digital_add_body_class( $classes ) {
+add_filter( 'body_class', 'neurogastronomi_add_body_class' );
+function neurogastronomi_add_body_class( $classes ) {
 
-	$classes[] = 'digital-landing';
+	$classes[] = 'neurogastronomi-landing';
 
 	return $classes;
 
@@ -25,8 +25,8 @@ function digital_add_body_class( $classes ) {
 remove_action ( 'genesis_before_header', 'genesis_skip_links', 5 );
 
 //* Dequeue Skip Links Script
-add_action( 'wp_enqueue_scripts', 'digital_dequeue_skip_links' );
-function digital_dequeue_skip_links() {
+add_action( 'wp_enqueue_scripts', 'neurogastronomi_dequeue_skip_links' );
+function neurogastronomi_dequeue_skip_links() {
 
 	wp_dequeue_script( 'skip-links' );
 

@@ -1,0 +1,102 @@
+/*
+	Theme Name: Neurogastronomi
+	Theme URI: https://github.com/mbernth/Genesis-Neurogastronomi-theme
+	Description: Genesis theme based on Digtal pro
+	Author: mono voce aps
+	Author URI: http://www.monovoce.com/
+
+	Version: 1.0.0
+
+	Tags: One-column, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-colors, custom-header, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready
+
+	Template: genesis
+	Template Version: 2.2
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php 
+*/
+
+/* Table of Contents
+- Imports
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing */
+	@import 'reset';
+	@import 'mixins';
+	@import 'tint_shade';
+
+/*  Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Gallery
+	- Forms
+	- Column Classes
+	- Tables
+	- Screen Reader Text */
+	@import 'defaults';
+	
+/* Structure and Layout
+	- Site Container
+	- Site Inner */
+	@import 'structure_layout';
+
+/* Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress */
+	@import 'common_classes';
+
+/* Widgets
+	- Featured Content */
+	@import 'widgets';
+	
+/* Plugins
+	- Genesis eNews Extended
+	- Genesis Simple Share
+	- Jetpack
+	- Countdown */
+	@import 'plugins';
+	
+/* Skip Links */
+	@import 'skip_links';
+
+/* Site Header
+	- Site Title and Description */
+	@import 'site_header';
+
+/* Site Navigation
+	- Accessible Menu
+	- Primary Navigation
+	- Secondary Navigation
+	- Responsive Navigation */
+	@import 'site_navigation';
+	
+/* Content Area
+	- Entries
+	- Intro Text
+	- Entry Meta
+	- After Entry
+	- Pagination
+	- Sidebar	
+	- Comments */
+	@import 'content_area';
+	
+/* Footer Widgets 
+	- Site Footer */
+	@import 'footer_widgets';
+
+/* Effects
+	- Fadeup Effect */
+	@import 'effects';
+	
+/* Media Queries
+		- Min-width: 801px */
+		@import 'min-801';
+	/*	- Max-width: 800px */
+		@import 'max-800';
+	/*	- Max-width: 600px */
+		@import 'max-600';

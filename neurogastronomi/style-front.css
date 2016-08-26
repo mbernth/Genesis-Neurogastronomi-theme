@@ -72,15 +72,17 @@
 
 .front-page-1 .widget-area {
 	display: table-cell;
-	padding-top: 20px;
+	padding-top: 0px;
 	vertical-align: middle;
 	width: 100%;
 }
 
 .front-page-1,
-.front-page-1 p,
+.front-page-1 p{
+	color:#fff;
+}
 .front-page-1 .widget-title {
-	color: #232525;
+	color: #a56927;
 }
 
 .front-page-1 .widget_text .widget-title {
@@ -128,6 +130,12 @@
 
 /* Front Page 2
 --------------------------------------------- */
+.site-container [class*="front-page"] {
+	background-color: #fff;
+}
+.site-container [class*="front-page"]:nth-child(2n) {
+	background-color: #232525;
+}
 
 .front-page-2 {
 	background-color: #fff;

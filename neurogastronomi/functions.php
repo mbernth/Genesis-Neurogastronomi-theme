@@ -6,7 +6,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 
 //* Set Localization (do not remove)
-load_child_theme_textdomain( 'digital', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'digital' ) );
+load_child_theme_textdomain( 'neurogastronomi', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'neurogastronomi' ) );
 
 //* Add Image upload and Color select to WordPress Theme Customizer
 require_once( get_stylesheet_directory() . '/lib/customize.php' );
@@ -15,27 +15,27 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Digital Pro' );
-define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/digital/' );
-define( 'CHILD_THEME_VERSION', '1.0.3' );
+define( 'CHILD_THEME_NAME', 'Neurogastronomi' );
+define( 'CHILD_THEME_URL', 'https://github.com/mbernth/Genesis-Neurogastronomi-theme' );
+define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Enqueue scripts and styles
-add_action( 'wp_enqueue_scripts', 'digital_scripts_styles' );
-function digital_scripts_styles() {
+add_action( 'wp_enqueue_scripts', 'neurogastronomi_scripts_styles' );
+function neurogastronomi_scripts_styles() {
 
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Poppins:400,500,600,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Titillium+Web:600|Ubuntu:400,400i,700,700i&subset=latin-ext', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'ionicons', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array(), CHILD_THEME_VERSION );
 
-	wp_enqueue_script( 'digital-fadeup-script', get_stylesheet_directory_uri() . '/js/fadeup.js', array( 'jquery' ), '1.0.0', true );
-	wp_enqueue_script( 'digital-site-header', get_stylesheet_directory_uri() . '/js/site-header.js', array( 'jquery' ), '1.0.0', true );
-	wp_enqueue_script( 'digital-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'neurogastronomi-fadeup-script', get_stylesheet_directory_uri() . '/js/fadeup.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'neurogastronomi-site-header', get_stylesheet_directory_uri() . '/js/site-header.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'neurogastronomi-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
 	wp_enqueue_script( 'count-jquery', get_stylesheet_directory_uri() . '/js/jquery.min.js', array( 'jquery' ), '1.0.0' );
 	wp_enqueue_script( 'countdown', get_stylesheet_directory_uri() . '/js/countdown.js', array( 'jquery' ), '1.0.0' );
 	$output = array(
-		'mainMenu' => __( 'Menu', 'digital' ),
-		'subMenu'  => __( 'Menu', 'digital' ),
+		'mainMenu' => __( 'Menu', 'neurogastronomi' ),
+		'subMenu'  => __( 'Menu', 'neurogastronomi' ),
 	);
-	wp_localize_script( 'digital-responsive-menu', 'DigitalL10n', $output );
+	wp_localize_script( 'neurogastronomi-responsive-menu', 'DigitalL10n', $output );
 
 }
 
@@ -64,15 +64,15 @@ add_theme_support( 'custom-header', array(
 add_theme_support( 'genesis-after-entry-widget-area' );
 
 //* Rename primary and secondary navigation menus
-add_theme_support( 'genesis-menus' , array( 'primary' => __( 'Header Menu', 'digital' ), 'secondary' => __( 'Footer Menu', 'digital' ) ) );
+add_theme_support( 'genesis-menus' , array( 'primary' => __( 'Header Menu', 'neurogastronomi' ), 'secondary' => __( 'Footer Menu', 'neurogastronomi' ) ) );
 
 //* Remove output of primary navigation right extras
 remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
 remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
 
 //* Remove navigation meta box
-add_action( 'genesis_theme_settings_metaboxes', 'digital_remove_genesis_metaboxes' );
-function digital_remove_genesis_metaboxes( $_genesis_theme_settings_pagehook ) {
+add_action( 'genesis_theme_settings_metaboxes', 'neurogastronomi_remove_genesis_metaboxes' );
+function neurogastronomi_remove_genesis_metaboxes( $_genesis_theme_settings_pagehook ) {
 
     remove_meta_box( 'genesis-theme-settings-nav', $_genesis_theme_settings_pagehook, 'main' );
 
@@ -97,8 +97,8 @@ remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_footer', 'genesis_do_subnav', 12 );
 
 //* Reduce secondary navigation menu to one level depth
-add_filter( 'wp_nav_menu_args', 'digital_secondary_menu_args' );
-function digital_secondary_menu_args( $args ) {
+add_filter( 'wp_nav_menu_args', 'neurogastronomi_secondary_menu_args' );
+function neurogastronomi_secondary_menu_args( $args ) {
 
 	if ( 'secondary' != $args['theme_location'] ) {
 		return $args;
@@ -111,8 +111,8 @@ function digital_secondary_menu_args( $args ) {
 }
 
 //* Remove skip link for primary navigation
-add_filter( 'genesis_skip_links_output', 'digital_skip_links_output' );
-function digital_skip_links_output( $links ) {
+add_filter( 'genesis_skip_links_output', 'neurogastronomi_skip_links_output' );
+function neurogastronomi_skip_links_output( $links ) {
 
 	if ( isset( $links['genesis-nav-primary'] ) ) {
 		unset( $links['genesis-nav-primary'] );
@@ -135,8 +135,8 @@ remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 add_action( 'genesis_entry_header', 'genesis_post_info', 8 );
 
 //* Customize entry meta in the entry header
-add_filter( 'genesis_post_info', 'digital_entry_meta_header' );
-function digital_entry_meta_header( $post_info ) {
+add_filter( 'genesis_post_info', 'neurogastronomi_entry_meta_header' );
+function neurogastronomi_entry_meta_header( $post_info ) {
 
 	$post_info = '[post_author_posts_link] / [post_date] [post_edit]';
 
@@ -145,8 +145,8 @@ function digital_entry_meta_header( $post_info ) {
 }
 
 //* Customize the content limit more markup
-add_filter( 'get_the_content_limit', 'digital_content_limit_read_more_markup', 10, 3 );
-function digital_content_limit_read_more_markup( $output, $content, $link ) {	
+add_filter( 'get_the_content_limit', 'neurogastronomi_content_limit_read_more_markup', 10, 3 );
+function neurogastronomi_content_limit_read_more_markup( $output, $content, $link ) {	
 
 	$output = sprintf( '<p>%s &#x02026;</p><p class="more-link-wrap">%s</p>', $content, str_replace( '&#x02026;', '', $link ) );
 
@@ -155,24 +155,24 @@ function digital_content_limit_read_more_markup( $output, $content, $link ) {
 }
 
 //* Customize author box title
-add_filter( 'genesis_author_box_title', 'digital_author_box_title' );
-function digital_author_box_title() {
+add_filter( 'genesis_author_box_title', 'neurogastronomi_author_box_title' );
+function neurogastronomi_author_box_title() {
 
 	return '<span itemprop="name">' . get_the_author() . '</span>';
 
 }
 
 //* Modify size of the Gravatar in the author box
-add_filter( 'genesis_author_box_gravatar_size', 'digital_author_box_gravatar' );
-function digital_author_box_gravatar( $size ) {
+add_filter( 'genesis_author_box_gravatar_size', 'neurogastronomi_author_box_gravatar' );
+function neurogastronomi_author_box_gravatar( $size ) {
 
 	return 160;
 
 }
 
 //* Modify size of the Gravatar in the entry comments
-add_filter( 'genesis_comment_list_args', 'digital_comments_gravatar' );
-function digital_comments_gravatar( $args ) {
+add_filter( 'genesis_comment_list_args', 'neurogastronomi_comments_gravatar' );
+function neurogastronomi_comments_gravatar( $args ) {
 
 	$args['avatar_size'] = 120;
 
@@ -181,8 +181,8 @@ function digital_comments_gravatar( $args ) {
 }
 
 //* Remove entry meta in the entry footer on category pages
-add_action( 'genesis_before_entry', 'digital_remove_entry_footer' );
-function digital_remove_entry_footer() {
+add_action( 'genesis_before_entry', 'neurogastronomi_remove_entry_footer' );
+function neurogastronomi_remove_entry_footer() {
 
 	if ( is_front_page() || is_archive() || is_search() || is_page_template( 'page_blog.php' ) ) {
 		remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
@@ -193,7 +193,7 @@ function digital_remove_entry_footer() {
 }
 
 //* Setup widget counts
-function digital_count_widgets( $id ) {
+function neurogastronomi_count_widgets( $id ) {
 
 	global $sidebars_widgets;
 
@@ -204,9 +204,9 @@ function digital_count_widgets( $id ) {
 }
 
 //* Flexible widget classes
-function digital_widget_area_class( $id ) {
+function neurogastronomi_widget_area_class( $id ) {
 
-	$count = digital_count_widgets( $id );
+	$count = neurogastronomi_count_widgets( $id );
 
 	$class = '';
 
@@ -227,9 +227,9 @@ function digital_widget_area_class( $id ) {
 }
 
 //* Flexible widget classes
-function digital_halves_widget_area_class( $id ) {
+function neurogastronomi_halves_widget_area_class( $id ) {
 
-	$count = digital_count_widgets( $id );
+	$count = neurogastronomi_count_widgets( $id );
 
 	$class = '';
 
@@ -251,16 +251,31 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 //* Register widget areas
 genesis_register_sidebar( array(
 	'id'          => 'front-page-1',
-	'name'        => __( 'Front Page 1', 'digital' ),
-	'description' => __( 'This is the 1st section on the front page.', 'digital' ),
+	'name'        => __( 'Front Page 1', 'neurogastronomi' ),
+	'description' => __( 'This is the 1st section on the front page.', 'neurogastronomi' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-2',
-	'name'        => __( 'Front Page 2', 'digital' ),
-	'description' => __( 'This is the 2nd section on the front page.', 'digital' ),
+	'name'        => __( 'Front Page 2', 'neurogastronomi' ),
+	'description' => __( 'This is the 2nd section on the front page.', 'neurogastronomi' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-3',
-	'name'        => __( 'Front Page 3', 'digital' ),
-	'description' => __( 'This is the 3rd section on the front page.', 'digital' ),
+	'name'        => __( 'Front Page 3', 'neurogastronomi' ),
+	'description' => __( 'This is the 3rd section on the front page.', 'neurogastronomi' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-4',
+	'name'        => __( 'Front Page 4', 'neurogastronomi' ),
+	'description' => __( 'This is the 4th section on the front page.', 'neurogastronomi' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-5',
+	'name'        => __( 'Front Page 5', 'neurogastronomi' ),
+	'description' => __( 'This is the 5th section on the front page.', 'neurogastronomi' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'front-page-6',
+	'name'        => __( 'Front Page 6', 'neurogastronomi' ),
+	'description' => __( 'This is the 6th section on the front page.', 'neurogastronomi' ),
 ) );

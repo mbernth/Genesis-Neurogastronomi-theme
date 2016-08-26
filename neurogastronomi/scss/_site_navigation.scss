@@ -1,0 +1,119 @@
+/* Site Navigation
+---------------------------------------------------------------------------------------------------- */
+
+.genesis-nav-menu {
+	clear: both;
+	line-height: 1;
+	width: 100%;
+}
+
+.genesis-nav-menu .menu-item {
+	display: inline-block;
+	text-align: left;
+}
+
+.genesis-nav-menu a {
+	border-bottom-width: 0;
+	color: #232525;
+	display: block;
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+.genesis-nav-menu a:focus,
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a {
+	color: #e85555;
+}
+
+.genesis-nav-menu .sub-menu {
+	background-color: #fff;
+	left: -9999px;
+	opacity: 0;
+	position: absolute;
+}
+
+.genesis-nav-menu .sub-menu,
+.genesis-nav-menu .sub-menu a {
+	width: 180px;
+}
+
+.genesis-nav-menu .sub-menu .sub-menu {
+	margin: -44px 0 0 179px;
+}
+
+.genesis-nav-menu .sub-menu a {
+	border: 1px solid #eee;
+	border-top: 0;
+	padding: 15px;
+	position: relative;
+}
+
+.genesis-nav-menu .menu-item:hover {
+	position: static;
+}
+
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+	left: auto;
+	opacity: 1;
+}
+
+/* Accessible Menu
+--------------------------------------------- */
+
+.menu .menu-item:focus {
+	position: static;
+}
+
+.menu .menu-item > a:focus + ul.sub-menu,
+.menu .menu-item.sfHover > ul.sub-menu {
+	left: auto;
+	opacity: 1;
+}
+
+/* Primary Navigation
+--------------------------------------------- */
+
+.nav-primary {
+	float: right;
+	margin-top: 2px;
+}
+
+.nav-primary .genesis-nav-menu li.last a {
+	padding-right: 0;
+}
+
+.nav-primary .sub-menu {
+	border-top: 1px solid #ddd;
+}
+
+.nav-primary .genesis-nav-menu li li {
+	margin-left: 0;
+}
+
+/* Secondary Navigation
+--------------------------------------------- */
+
+.nav-secondary {
+	margin-top: 10px;
+}
+
+.nav-secondary .genesis-nav-menu a {
+	padding: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* Responsive Navigation
+--------------------------------------------- */
+
+.sub-menu-toggle,
+.menu-toggle {
+	display: none;
+	visibility: hidden;
+}

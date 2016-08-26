@@ -1,0 +1,268 @@
+/* Common Classes
+---------------------------------------------------------------------------------------------------- */
+
+/* Avatar
+--------------------------------------------- */
+
+.avatar {
+	border-radius: 50%;
+	float: left;
+}
+
+.after-entry .avatar {
+	float: right;
+	height: 180px;
+	margin-bottom: 30px;
+	margin-left: 30px;
+	width: 180px;
+}
+
+.alignleft .avatar,
+.author-box .avatar {
+	margin-right: 30px;
+}
+
+.alignright .avatar {
+	margin-left: 30px;
+}
+
+.author-box .avatar {
+	display: inline-block;
+	float: none;
+	height: 80px;
+	margin: 0 auto 20px;
+	width: 80px;
+}
+
+.comment .avatar {
+	height: 60px;
+	margin: 0 16px 24px 0;
+	width: 60px;
+}
+
+/* Genesis
+--------------------------------------------- */
+
+.archive-description,
+.author-box {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 10%;
+	padding-bottom: 10%;
+	text-align: center;
+}
+
+.archive-description p,
+.archive-description .archive-title,
+.author-box,
+.author-box p,
+.author-box .author-box-title {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 660px;
+}
+
+.breadcrumb {
+	border-bottom: 1px solid #eee;
+	font-size: 16px;
+	font-size: 1.6rem;
+	margin: 0 auto 10%;
+	max-width: 660px;
+	padding-bottom: 10px;
+}
+
+.author-box {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+.single .author-box {
+	border-top: 1px solid #eee;
+	padding-top: 10%;
+}
+
+.archive-description p:last-child,
+.author-box p:last-child {
+	margin-bottom: 0;
+}
+
+/* Search Form
+--------------------------------------------- */
+
+.search-form {
+	overflow: hidden;
+}
+
+.search-form input {
+	-webkit-appearance: none;
+}
+
+.search-form input[type="submit"] {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* Titles
+--------------------------------------------- */
+
+.archive-title,
+.author-box-title {
+	font-size: 30px;
+	font-size: 3rem;
+	letter-spacing: -1px;
+	margin-bottom: 10px;
+}
+
+.search .archive-title {
+	margin-bottom: 0;
+}
+
+.entry-title,
+.page.page-template-page_blog .entry-title {
+	font-size: 36px;
+	font-size: 3.6rem;
+	letter-spacing: -2px;
+	word-wrap: break-word;
+}
+
+.page .entry-title,
+.single .entry-title {
+	font-size: 48px;
+	font-size: 4.8rem;
+	font-weight: 700;
+	letter-spacing: -3px;
+}
+
+.error404 .entry-title {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 660px;
+}
+
+.content .entry-title a,
+.content .entry-title a:focus,
+.content .entry-title a:hover {
+	border-bottom: none;
+	color: #232525;
+}
+
+.content .entry-title a:focus,
+.content .entry-title a:hover {
+	color: #e85555;
+}
+
+.widget-title {
+	font-size: 22px;
+	font-size: 2.2rem;
+	letter-spacing: -1px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.widget-title.center {
+	margin-bottom: 10%;
+	text-align: center;
+}
+
+/* WordPress
+--------------------------------------------- */
+
+a.aligncenter img {
+	display: block;
+	margin: 0 auto;
+}
+
+a.alignnone {
+	display: inline-block;
+}
+
+.alignleft {
+	float: left;
+	text-align: left;
+}
+
+.alignright {
+	float: right;
+	text-align: right;
+}
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+	max-width: 50%;
+}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 30px;
+}
+
+img.alignnone,
+.alignnone {
+	margin-bottom: 12px;
+}
+
+a.alignleft,
+img.alignleft,
+.wp-caption.alignleft {
+	margin: 0 60px 30px 0;
+}
+
+a.alignright,
+img.alignright,
+.wp-caption.alignright {
+	margin: 0 0 30px 60px;
+}
+
+img.alignleft.entry-image,
+img.alignright.entry-image {
+	margin-bottom: 0;
+}
+
+.entry-content figure {
+	margin: 60px 0 50px;
+}
+
+.wp-caption-text {
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.entry-content p.wp-caption-text {
+	margin-bottom: 0;
+}
+
+.gallery-caption,
+.entry-content .gallery-caption {
+	margin: 0 0 10px;
+}
+
+.wp-audio-shortcode,
+.wp-playlist,
+.wp-video {
+	margin-bottom: 30px;
+}
+
+a[rel~="attachment"],
+a[rel~="attachment"]:hover,
+.gallery-item a,
+.wp-audio-shortcode a,
+.wp-audio-shortcode a:hover,
+.wp-caption a,
+.wp-caption a:hover,
+.wp-playlist a,
+.wp-playlist a:hover,
+.wp-video a,
+.wp-video a:hover {
+	border-width: 0 !important;
+}
+
+.sticky {
+}

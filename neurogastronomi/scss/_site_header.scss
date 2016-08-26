@@ -1,0 +1,90 @@
+/* Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+	/* background-color: $color-primary-two; */
+	@include linear-gradient($color-primary-two, tint($color-black, 2%));
+	padding: 28px 30px;
+	position: fixed;
+	top: 0;	
+	width: 100%;
+	z-index: 999;
+}
+
+.site-header.shrink {
+	border-bottom: 1px solid #eee;
+	padding: 18px 30px;
+}
+
+.admin-bar .site-header {
+	top: 32px;
+}
+
+/* Site Title and Description
+--------------------------------------------- */
+
+.title-area {
+	float: left;
+}
+
+.site-title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+.site-title a,
+.site-title a:hover,
+.site-title a:focus {
+	border-bottom-width: 0;
+	color: #232525;
+}
+
+.title-area .site-title > a {
+    display: block;
+    background: url(images/neurogastronomi_logo.svg) no-repeat left top;
+    width: 550px;
+    height: 36px;
+    margin-bottom: 0px;
+    text-indent: -9999px;
+}
+
+.header-image .nav-primary:not(button) {
+	margin-top: 22px;
+}
+
+.header-image .site-header {
+	padding: 9px 40px;
+}
+
+.header-image .site-header.shrink {
+	padding: 0 40px;
+}
+
+.header-image .site-title {
+	display: block;
+	text-indent: -9999px;
+}
+
+.header-image .site-title > a {
+	background-position: center center !important;
+	background-size: contain !important;
+	float: left;
+	min-height: 70px;
+	width: 300px;
+}
+
+.header-image .title-area {
+	margin: 0;
+}
+
+.site-description {
+	display: block;
+	height: 0;
+	margin-bottom: 0;
+	text-indent: -9999px;
+}

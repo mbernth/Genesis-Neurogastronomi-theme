@@ -4,11 +4,11 @@
 
 	'use strict';
 
-	var digital              = {},
+	var neuro              = {},
 		mainMenuButtonClass = 'menu-toggle',
 		subMenuButtonClass  = 'sub-menu-toggle';
 
-	digital.init = function() {
+	neuro.init = function() {
 		var toggleButtons = {
 			menu : $( '<button />', {
 				'class' : mainMenuButtonClass,
@@ -16,7 +16,7 @@
 				'aria-pressed' : false,
 				'role' : 'button'
 				} )
-				.append( digital.params.mainMenu ),
+				.append( neuro.params.mainMenu ),
 			submenu : $( '<button />', {
 				'class' : subMenuButtonClass,
 				'aria-expanded' : false,
@@ -25,15 +25,15 @@
 				} )
 				.append( $( '<span />', {
 					'class' : 'screen-reader-text',
-					text : digital.params.subMenu
+					text : neuro.params.subMenu
 				} ) )
 		};
 		$( '.nav-primary' ).before( toggleButtons.menu ); // add the main nav buttons
 		$( 'nav .sub-menu' ).before( toggleButtons.submenu ); // add the submenu nav buttons
 		$( '.' + mainMenuButtonClass ).each( _addClassID );
-		$( window ).on( 'resize.digital', _doResize ).triggerHandler( 'resize.digital' );
-		$( '.' + mainMenuButtonClass ).on( 'click.digital-mainbutton', _mainmenuToggle );
-		$( '.' + subMenuButtonClass ).on( 'click.digital-subbutton', _submenuToggle );
+		$( window ).on( 'resize.neuro', _doResize ).triggerHandler( 'resize.neuro' );
+		$( '.' + mainMenuButtonClass ).on( 'click.neuro-mainbutton', _mainmenuToggle );
+		$( '.' + subMenuButtonClass ).on( 'click.neuro-subbutton', _submenuToggle );
 	};
 
 	// add nav class and ID to related button
@@ -159,10 +159,10 @@
 
 	$(document).ready(function () {
 
-		digital.params = typeof DigitalL10n === 'undefined' ? '' : DigitalL10n;
+		neuro.params = typeof DigitalL10n === 'undefined' ? '' : DigitalL10n;
 
-		if ( typeof digital.params !== 'undefined' ) {
-			digital.init();
+		if ( typeof neuro.params !== 'undefined' ) {
+			neuro.init();
 		}
 
 	});

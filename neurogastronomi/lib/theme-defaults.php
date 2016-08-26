@@ -1,8 +1,8 @@
 <?php
 
-//* Digital Theme Setting Defaults
-add_filter( 'genesis_theme_settings_defaults', 'digital_theme_defaults' );
-function digital_theme_defaults( $defaults ) {
+//* Neurogastronomi Theme Setting Defaults
+add_filter( 'genesis_theme_settings_defaults', 'neurogastronomi_theme_defaults' );
+function neurogastronomi_theme_defaults( $defaults ) {
 
 	$defaults['blog_cat_num']              = 3;
 	$defaults['content_archive']           = 'full';
@@ -17,9 +17,9 @@ function digital_theme_defaults( $defaults ) {
 
 }
 
-//* Digital Theme Setup
-add_action( 'after_switch_theme', 'digital_theme_setting_defaults' );
-function digital_theme_setting_defaults() {
+//* Neurogastronomi Theme Setup
+add_action( 'after_switch_theme', 'neurogastronomi_theme_setting_defaults' );
+function neurogastronomi_theme_setting_defaults() {
 
 	if ( function_exists( 'genesis_update_settings' ) ) {
 
@@ -41,8 +41,8 @@ function digital_theme_setting_defaults() {
 }
 
 //* Simple Social Icon Defaults
-add_filter( 'simple_social_default_styles', 'digital_social_default_styles' );
-function digital_social_default_styles( $defaults ) {
+add_filter( 'simple_social_default_styles', 'neurogastronomi_social_default_styles' );
+function neurogastronomi_social_default_styles( $defaults ) {
 
 	$args = array(
 		'alignment'              => 'alignleft',
