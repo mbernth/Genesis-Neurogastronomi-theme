@@ -82,6 +82,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/_max-480.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_max-480.scss",
+		"outputAbbreviatedPath": "\/css\/_max-480.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/_max-600.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -242,6 +258,38 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/_style_front.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_style_front.scss",
+		"outputAbbreviatedPath": "\/css\/_style_front.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/_style_ie9.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_style_ie9.scss",
+		"outputAbbreviatedPath": "\/css\/_style_ie9.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/_tint_shade.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -302,7 +350,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Michael Bernth",
+"lastSavedByUser": "Yukyung Jin",
 "manualImportLinks": {
 	},
 "projectAttributes": {

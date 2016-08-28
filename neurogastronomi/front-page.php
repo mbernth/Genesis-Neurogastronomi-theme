@@ -20,7 +20,7 @@ function neurogastronomi_front_page_genesis_meta() {
 		add_action( 'wp_enqueue_scripts', 'neurogastronomi_enqueue_neurogastronomi_script' );
 		function neurogastronomi_enqueue_neurogastronomi_script() {
 
-			wp_register_style( 'neurogastronomiIE9', get_stylesheet_directory_uri() . '/style-ie9.css', array(), CHILD_THEME_VERSION );
+			// wp_register_style( 'neurogastronomiIE9', get_stylesheet_directory_uri() . '/style-ie9.css', array(), CHILD_THEME_VERSION );
 			wp_style_add_data( 'neurogastronomiIE9', 'conditional', 'IE 9' );
 			wp_enqueue_style( 'neurogastronomiIE9' );
 
@@ -28,7 +28,7 @@ function neurogastronomi_front_page_genesis_meta() {
 			wp_enqueue_script( 'localScroll', get_stylesheet_directory_uri() . '/js/jquery.localScroll.min.js', array( 'scrollTo' ), '1.2.8b', true );
 			wp_enqueue_script( 'scrollTo', get_stylesheet_directory_uri() . '/js/jquery.scrollTo.min.js', array( 'jquery' ), '1.4.5-beta', true );
 
-			wp_enqueue_style( 'neurogastronomi-front-styles', get_stylesheet_directory_uri() . '/style-front.css', array(), CHILD_THEME_VERSION );
+			// wp_enqueue_style( 'neurogastronomi-front-styles', get_stylesheet_directory_uri() . '/style-front.css', array(), CHILD_THEME_VERSION );
 
 		}
 

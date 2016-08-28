@@ -194,7 +194,7 @@ p.entry-meta {
 
 .pagination a:focus,
 .pagination a:hover {
-	border-bottom: 1px solid #e85555;
+	border-bottom: 1px solid $color-primary-one;
 
 }
 
@@ -209,7 +209,7 @@ p.entry-meta {
 .archive-pagination li a {
 	background-color: #232525;
 	border: 1px solid #232525;
-	color: #fff;
+	color: $color-white;
 	cursor: pointer;
 	display: inline-block;
 	margin-bottom: 4px;
@@ -219,9 +219,9 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination .active a {
-	background-color: #e85555;
-	border: 1px solid #e85555;
-	color: #fff;
+	background-color: $color-primary-one;
+	border: 1px solid $color-primary-one;
+	color: $color-white;
 }
 
 /* Sidebar

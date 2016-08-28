@@ -1,0 +1,44 @@
+/* Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+	
+	/*
+	*/
+	button.menu-toggle {
+		height:18px;
+	}
+	.menu-toggle:before,
+	.menu-toggle.activated:before {
+		font: normal 20px/1 'ionicons';
+		padding: 0;
+		height:18px;
+	}
+	
+	/*  Front Page
+	-------------------------------------- */
+	
+	
+	/*  Site Header
+	-------------------------------------- */
+	.title-area .site-title > a {
+		width: 180px;
+    	height: 18px;
+	}
+	
+	/*  Countdown
+	-------------------------------------- */
+	.front-page-1 p.numbers{
+		@include font(3.8, 3.8);
+	}
+	
+	div#countdown p.strings{
+		@include font(1, 1);
+	}
+	
+	div.cd-box{
+		@include grid(4, 5, 480);
+		height: 160px;
+	}
+	
+}

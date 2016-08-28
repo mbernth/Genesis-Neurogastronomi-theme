@@ -36,6 +36,15 @@
 	- Tables
 	- Screen Reader Text */
 	@import 'defaults';
+
+/*  Front Page
+	- Flexible Widgets
+	- Front Page 1
+	- Front Page 2
+	- Front Page 3
+	- IE9 fallback */
+	@import 'style_front';
+	@import 'style_ie9';
 	
 /* Structure and Layout
 	- Site Container
@@ -100,3 +109,5 @@
 		@import 'max-800';
 	/*	- Max-width: 600px */
 		@import 'max-600';
+	/*	- Max-width: 480px */
+		@import 'max-480';

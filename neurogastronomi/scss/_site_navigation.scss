@@ -14,11 +14,9 @@
 
 .genesis-nav-menu a {
 	border-bottom-width: 0;
-	color: #232525;
+	color: $color-white;
 	display: block;
-	font-family: 'Poppins', sans-serif;
-	font-size: 12px;
-	font-size: 1.2rem;
+	@include font(1.2, 2);
 	font-weight: 600;
 	letter-spacing: 0.5px;
 	padding: 10px;
@@ -28,11 +26,11 @@
 .genesis-nav-menu a:focus,
 .genesis-nav-menu a:hover,
 .genesis-nav-menu .current-menu-item > a {
-	color: #e85555;
+	color: $color-primary-one;
 }
 
 .genesis-nav-menu .sub-menu {
-	background-color: #fff;
+	background-color: $color-white;
 	left: -9999px;
 	opacity: 0;
 	position: absolute;
@@ -48,7 +46,7 @@
 }
 
 .genesis-nav-menu .sub-menu a {
-	border: 1px solid #eee;
+	border: 1px solid tint($color-primary-two, 80%);
 	border-top: 0;
 	padding: 15px;
 	position: relative;
@@ -89,7 +87,7 @@
 }
 
 .nav-primary .sub-menu {
-	border-top: 1px solid #ddd;
+	border-top: 1px solid tint($color-primary-two, 80%);
 }
 
 .nav-primary .genesis-nav-menu li li {

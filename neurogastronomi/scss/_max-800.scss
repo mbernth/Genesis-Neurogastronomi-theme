@@ -26,8 +26,15 @@
 		text-align: center;
 	}
 	
+	/*  Site Header
+	-------------------------------------- */
+	.title-area .site-title > a {
+		width: 280px;
+    	height: 28px;
+	}
+	
 	.header-image .nav-primary:not(button) {
-		background: #fff;
+		background: $color-white;
 		margin-top: 0;
 		padding-bottom: 20px;
 	}
@@ -36,9 +43,19 @@
 	.content-sidebar .sidebar,
 	.nav-primary,
 	.sidebar-content .content,
-	.sidebar-content .sidebar,
-	.title-area {
+	.sidebar-content .sidebar {
 		float: none;
+	}
+	
+	nav.nav-primary,
+	nav.nav-primary .wrap {
+		float:left;
+		width:100%;
+	}
+	
+	ul.genesis-nav-menu {
+		margin-top:15px;
+		border-top:1px solid $color-primary-one;
 	}
 	
 	.js .nav-primary .sub-menu a {
@@ -64,7 +81,7 @@
 		background: none;
 		border-radius: 0;
 		border-width: 0;
-		color: #1e1e1e;
+		color: $color-white;
 		display: block;
 		margin: 0 auto;
 		overflow: hidden;
@@ -81,27 +98,31 @@
 	}
 
 	.menu-toggle {
-		padding-bottom: 0;
-		padding-top: 10px;
+		padding: 0;
+		float:right;
 		position: relative;
-		right: 0;
 		z-index: 1000;
-		width: 100%;
+		text-indent:-999px;
 	}
 
 	.menu-toggle:before,
 	.menu-toggle.activated:before {
-		color: #1e1e1e;
+		color: $color-white;
 		content: "\f130";
 		display: inline-block;
-		font: normal 20px/1 'ionicons';
+		font: normal 26px/1 'ionicons';
 		margin: 0 auto;
-		padding-right: 10px;
+		padding: 3px 0;
 		text-rendering: auto;
 		-webkit-transform: translate(0, 0);
 		-ms-transform:     translate(0, 0);
 		transform:         translate(0, 0);
 		vertical-align: middle;
+		text-indent:0px;
+		float:right;
+	}
+	.menu-toggle.activated:before {
+		color:$color-primary-one;
 	}
 
 	.sub-menu-toggle {
@@ -142,8 +163,13 @@
 
 	.js .genesis-nav-menu .menu-item a {
 		border: none;
-		padding: 10px;
+		margin-top:10px;
+		padding: 10px 3px;
 		width: 100%;
+	}
+	
+	.js .genesis-nav-menu .menu-item a:last-child{
+		padding-bottom:0px;
 	}
 
 	.js .genesis-nav-menu .menu-item a:hover,
@@ -182,12 +208,12 @@
 	.js nav button:hover,
 	.js .menu-toggle:hover,
 	.js .nav-primary {
-		color: #1e1e1e;
+		color: $color-white;
 	}
 
 	.js nav button:focus,
 	.js .menu-toggle:focus {
-		color: #e85555;
+		color: $color-primary-one;
 	}
 
 	.content {
